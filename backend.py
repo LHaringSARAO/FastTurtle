@@ -44,7 +44,6 @@ class TurtleWorld():
     
 
     def move_turtles(self):
-        turtle1 = self.turtle_list[0]
         counter = 0
         for ninja in self.turtle_list:
             counter += 1

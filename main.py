@@ -20,17 +20,16 @@ def read_root():
     return {"Hello" : "Root"}
 
 
-@app.get("/test_turtle")
-def test_turtle():
-    func_turtle()
-    return None
+# @app.get("/test_turtle")
+# def test_turtle():
+#     func_turtle()
+#     return None
 
-@app.get("/test_turtle_world")
+@app.get("/create_turtles")
 async def test_turtle_world(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
-    turtleworld.create_turtle()
+    turtleworld.create_turtles()
 
 
-@app.get("/test_turtle_command")
+@app.get("/move_turtles")
 async def test_turtle_command(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
-    pinkie = turtleworld.create_turtle()
-    pinkie.forward(100)
+    turtleworld.move_turtles()
