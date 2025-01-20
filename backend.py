@@ -31,8 +31,11 @@ class TurtleWorld():
 
 
 
-    def create_turtle(self):
+    def create_turtle(self, color:int ):
         leonardo = turtle.Turtle()
+        possible_colors = ["red", "greed"]
+        if color in possible_colors:
+            leonardo.color(color=color)
         leonardo.forward(100)
         # turtle.done()
         return {"message": "Done"}

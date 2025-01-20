@@ -28,3 +28,9 @@ def test_turtle():
 @app.get("/test_turtle_world")
 async def test_turtle_world(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
     turtleworld.create_turtle()
+
+
+@app.get("/test_turtle_command")
+async def test_turtle_command(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
+    pinkie = turtleworld.create_turtle()
+    pinkie.forward(100)
