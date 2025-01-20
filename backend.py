@@ -28,7 +28,7 @@ def func_turtle():
 
 
 
-class TurtleWorld(turtle.Screen):
+class TurtleWorld(turtle.TurtleScreen):
     """The place where all turtle related stuff happens"""
     def __init__(self):
         super().__init__()
