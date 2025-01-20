@@ -38,8 +38,10 @@ class TurtleWorld():
         michelangelo = turtle.Turtle()
         raphael = turtle.Turtle()
 
-        self.turtle_list.append(leonardo, donatello, michelangelo, raphael)
-
+        self.turtle_list.append(leonardo)
+        self.turtle_list.append(donatello)
+        self.turtle_list.append(michelangelo)
+        self.turtle_list.append(raphael)
         return {"message": "Done"}
     
 
