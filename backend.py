@@ -30,7 +30,7 @@ def func_turtle():
 
 class TurtleWorld(turtle.Screen):
     """The place where all turtle related stuff happens"""
-    def __init__():
+    def __init__(self):
         super().__init__()
 
         # self.bgcolor()
