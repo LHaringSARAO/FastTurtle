@@ -17,7 +17,7 @@ def test_turtle():
     func_turtle()
     return None
 
-
+@app.get("/test_turtle_world")
 def test_turtle_world():
     turtleworld = TurtleWorld()
     turtleworld.create_turtle()
