@@ -34,4 +34,5 @@ class TurtleWorld():
     def create_turtle(self):
         leonardo = turtle.Turtle()
         leonardo.forward(100)
-        turtle.done()
+        # turtle.done()
+        return {"message": "Done"}
