@@ -1,11 +1,19 @@
 from fastapi import FastAPI
 
+# for dependency injection
+from fastapi import Depends
+from typing import Annotated
+
 
 from backend import func_turtle
 from backend import TurtleWorld
 
 app = FastAPI()
 
+turtleworld = TurtleWorld()
+def get_TurtleWorld() ->TurtleWorld:
+    """Returns the instance of the world"""
+    return turtleworld
 
 @app.get("/")
 def read_root():
@@ -18,6 +26,5 @@ def test_turtle():
     return None
 
 @app.get("/test_turtle_world")
-def test_turtle_world():
-    turtleworld = TurtleWorld()
+async def test_turtle_world(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
     turtleworld.create_turtle()

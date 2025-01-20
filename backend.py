@@ -25,9 +25,7 @@ def func_turtle():
 
 
 
-def get_TurtleWorld():
-    """Returns the instance of the world"""
-    return
+
 
 
 class TurtleWorld():
