@@ -31,7 +31,7 @@ class TurtleWorld():
 
 
 
-    def create_turtle(self, color:int ):
+    def create_turtle(self, color:int = ""):
         leonardo = turtle.Turtle()
         possible_colors = ["red", "greed"]
         if color in possible_colors:
