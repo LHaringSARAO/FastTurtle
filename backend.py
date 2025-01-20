@@ -21,7 +21,7 @@ def func_turtle():
 
 
 
-    
+
 
 
 
@@ -39,7 +39,7 @@ class TurtleWorld():
 
 
 
-    def create_turtle():
+    def create_turtle(self):
         leonardo = turtle.Turtle()
         leonardo.forward(100)
         turtle.done()
