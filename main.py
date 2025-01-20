@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 
 from backend import func_turtle
+from backend import TurtleWorld
 
 app = FastAPI()
 
@@ -15,3 +16,8 @@ def read_root():
 def test_turtle():
     func_turtle()
     return None
+
+
+def test_turtle_world():
+    turtleworld = TurtleWorld()
+    turtleworld.create_turtle()
