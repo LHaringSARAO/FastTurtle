@@ -33,3 +33,15 @@ async def test_turtle_world(turtleworld: Annotated[TurtleWorld, Depends(get_Turt
 @app.get("/move_turtles")
 async def test_turtle_command(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
     turtleworld.move_turtles()
+
+
+@app.get("/create_turtle_race_world")
+async def create_turtle_race(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
+    turtleworld._create_world_racing()
+    return
+
+
+@app.get("/race_turtles")
+async def create_turtle_race(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
+    turtleworld.run_turtle_race()
+    return
