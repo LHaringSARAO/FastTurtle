@@ -18,7 +18,8 @@ class TurtleWorld():
 
     def reset(self):
         """Should reset canvas and get rid of all turtles"""
-        
+        self.screen.resetscreen()
+        return {"message": "screen and turtles reset"}
 
 
 

@@ -46,3 +46,8 @@ async def create_turtle_race(turtleworld: Annotated[TurtleWorld, Depends(get_Tur
 async def create_turtle_race(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
     data = turtleworld.run_turtle_race()
     return data
+
+
+@app.get("/reset")
+async def reset_screen(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
+    turtleworld.reset()
