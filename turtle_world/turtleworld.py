@@ -14,7 +14,7 @@ class TurtleWorld():
 
         self.screen.bgcolor("green")
         self.screen.title("Turtle World")
-        self.screensize(2000,1500)
+        self.screen.screensize(2000,1500)
 
     def reset(self):
         """Should reset canvas and get rid of all turtles"""
