@@ -68,6 +68,7 @@ class TurtleWorld():
         data = {}
         winner = False
         counter = 0
+        distance_finishline = 1000
         while not winner:
             if counter > 500:
                 break
@@ -76,7 +77,7 @@ class TurtleWorld():
                 distancee_to_travel = randint(1, 100)
                 turbo.forward(distancee_to_travel)
                 print(turbo.pos())
-                if turbo.ycor() > 100:
+                if turbo.ycor() > distance_finishline:
                     winner = True
                     data["winner_distance"] = str(turbo.pos())
                     # how are the turtles named?
