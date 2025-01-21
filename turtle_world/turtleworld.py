@@ -47,9 +47,9 @@ class TurtleWorld():
         num_turtles = 5
         for _num in range(num_turtles):
             my_turtle = turtle.Turtle()
-            my_turtle.left()
+            my_turtle.left(90)
             my_turtle.forward(100*_num)
-            my_turtle.right()
+            my_turtle.right(90)
             self.turtle_list.append(my_turtle)
 
 
