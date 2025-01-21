@@ -1,0 +1,2 @@
+# Ignore assembly files as they can be massive
+*.drawio
