@@ -45,7 +45,7 @@ class TurtleWorld():
     def _create_world_racing(self):
         """Creates a world """
         num_turtles = 5
-        turtle.colormode = 255
+        turtle.colormode(255)
 
 
         for _num in range(num_turtles):
