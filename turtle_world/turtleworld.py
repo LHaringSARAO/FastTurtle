@@ -59,16 +59,17 @@ class TurtleWorld():
         winner = False
         counter = 0
         while not winner:
-            if counter > 100:
+            if counter > 500:
                 break
             for turbo in self.turtle_list:
+                sleep(0.5)
                 distancee_to_travel = randint(1, 100)
                 turbo.forward(distancee_to_travel)
                 print(turbo.pos())
                 if turbo.xcor() > 100:
                     winner = True
+                    data["winner_distance"] = str(turbo.xcor())
                     # how are the turtles named?
-        data["winner"] = "someone"
 
         return data
 
