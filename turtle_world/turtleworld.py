@@ -56,9 +56,20 @@ class TurtleWorld():
         """Run the turtle race"""
         # NOTE need to add a way to detect that the finish line has been reached.
         data = {}
-        for turbo in self.turtle_list:
-            distancee_to_travel = randint(1, 100)
-            turbo.forward(distancee_to_travel)
+        winner = False
+        counter = 0
+        while not winner:
+            if counter > 100:
+                break
+            for turbo in self.turtle_list:
+                distancee_to_travel = randint(1, 10)
+                turbo.forward(distancee_to_travel)
+                print(turbo.pos())
+                if turbo.xcor() > 100:
+                    winner = True
+                    # how are the turtles named?
+        data["winner"] = "someone"
+
         return data
 
 
