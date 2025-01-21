@@ -45,8 +45,15 @@ class TurtleWorld():
     def _create_world_racing(self):
         """Creates a world """
         num_turtles = 5
+
+
         for _num in range(num_turtles):
             my_turtle = turtle.Turtle()
+            my_turtle.shape("turtle")
+            r = randint(0, 255)
+            g = randint(0, 255)
+            b = randint(0, 255)
+            my_turtle.color((r,g,b))
             my_turtle.forward(100*_num)
             my_turtle.left(90)
             self.turtle_list.append(my_turtle)
