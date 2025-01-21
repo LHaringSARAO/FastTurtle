@@ -50,9 +50,9 @@ class TurtleWorld():
         for _num in range(num_turtles):
             my_turtle = turtle.Turtle()
             my_turtle.shape("turtle")
-            r = randint(0, 255)
-            g = randint(0, 255)
-            b = randint(0, 255)
+            r = float(randint(0, 255))
+            g = float(randint(0, 255))
+            b = float(randint(0, 255))
             my_turtle.color((r,g,b), (r, g, b))
             my_turtle.forward(100*_num)
             my_turtle.left(90)
