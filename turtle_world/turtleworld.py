@@ -54,7 +54,7 @@ class TurtleWorld():
             r = randint(0, 255)
             g = randint(0, 255)
             b = randint(0, 255)
-            my_turtle.color((r,g,b), (r, g, b))
+            my_turtle.color((r,g,b))
             my_turtle.forward(100*_num)
             my_turtle.left(90)
             self.turtle_list.append(my_turtle)
