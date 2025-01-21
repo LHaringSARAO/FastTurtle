@@ -6,7 +6,7 @@ from typing import Annotated
 
 
 from backend import func_turtle
-from backend import TurtleWorld
+from turtle_world.turtleworld import TurtleWorld
 
 app = FastAPI()
 
