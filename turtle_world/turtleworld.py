@@ -12,8 +12,9 @@ class TurtleWorld():
         self.screen = turtle.Screen()
         self.turtle_list = []
 
-        # self.bgcolor()
-        # self.T_screen.title("Turtle World")
+        self.screen.bgcolor("green")
+        self.screen.title("Turtle World")
+        self.screensize(2000,1500)
 
     def reset(self):
         """Should reset canvas and get rid of all turtles"""
@@ -74,9 +75,9 @@ class TurtleWorld():
                 distancee_to_travel = randint(1, 100)
                 turbo.forward(distancee_to_travel)
                 print(turbo.pos())
-                if turbo.xcor() > 100:
+                if turbo.ycor() > 100:
                     winner = True
-                    data["winner_distance"] = str(turbo.xcor())
+                    data["winner_distance"] = str(turbo.pos())
                     # how are the turtles named?
 
         return data
