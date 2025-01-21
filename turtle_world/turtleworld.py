@@ -62,7 +62,7 @@ class TurtleWorld():
             if counter > 100:
                 break
             for turbo in self.turtle_list:
-                distancee_to_travel = randint(1, 10)
+                distancee_to_travel = randint(1, 100)
                 turbo.forward(distancee_to_travel)
                 print(turbo.pos())
                 if turbo.xcor() > 100:

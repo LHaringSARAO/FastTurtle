@@ -44,5 +44,5 @@ async def create_turtle_race(turtleworld: Annotated[TurtleWorld, Depends(get_Tur
 
 @app.get("/race_turtles")
 async def create_turtle_race(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
-    turtleworld.run_turtle_race()
-    return
+    data = turtleworld.run_turtle_race()
+    return data
