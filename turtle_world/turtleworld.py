@@ -23,6 +23,7 @@ class TurtleWorld():
         # self.screen.resetscreen()
         self.screen.clearscreen()
         turtle.bye()
+        self.__init__()
         # NOTE the resetscreen does remove settings made, but doesnt remove the turtles
         return {"message": "screen and turtles reset"}
 
