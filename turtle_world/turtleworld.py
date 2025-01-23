@@ -21,6 +21,7 @@ class TurtleWorld():
         """Should reset canvas and get rid of all turtles"""
         # self.screen.resetscreen()
         self.screen.clearscreen()
+        turtle.bye()
         # NOTE the resetscreen does remove settings made, but doesnt remove the turtles
         return {"message": "screen and turtles reset"}
 
