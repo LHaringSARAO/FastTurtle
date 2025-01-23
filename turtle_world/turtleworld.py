@@ -87,8 +87,8 @@ class TurtleWorld():
         while not winner:
             if counter > 500:
                 break
+            sleep(0.5)
             for turbo in self.turtle_list:
-                sleep(0.5)
                 distancee_to_travel = randint(1, 100)
                 turbo.forward(distancee_to_travel)
                 print(turbo.pos())
