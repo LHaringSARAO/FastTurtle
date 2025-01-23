@@ -15,7 +15,8 @@ class TurtleWorld():
         turtle.colormode(255)
         self.screen.bgcolor((144, 236, 144))
         self.screen.title("Turtle World")
-        self.screen.screensize(2000,1500)
+        # self.screen.screensize(2000,1500) remove when full screen app is present
+        self.screen.setup(width=1.0, height=1.0)
 
     def reset(self):
         """Should reset canvas and get rid of all turtles"""
