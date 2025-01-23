@@ -5,7 +5,7 @@ from fastapi import Depends
 from typing import Annotated
 
 
-from backend import func_turtle
+# from backend import func_turtle
 from turtle_world.turtleworld import TurtleWorld
 
 app = FastAPI()
