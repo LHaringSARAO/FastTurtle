@@ -26,14 +26,14 @@ def read_root():
 #     func_turtle()
 #     return None
 
-@app.get("/create_turtles")
-async def test_turtle_world(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
-    turtleworld.create_turtles()
+# @app.get("/create_turtles")
+# async def test_turtle_world(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
+#     turtleworld.create_turtles()
 
 
-@app.get("/move_turtles")
-async def test_turtle_command(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
-    turtleworld.move_turtles()
+# @app.get("/move_turtles")
+# async def test_turtle_command(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
+#     turtleworld.move_turtles()
 
 
 @app.get("/create_turtle_race_world")
@@ -50,4 +50,5 @@ async def create_turtle_race(turtleworld: Annotated[TurtleWorld, Depends(get_Tur
 
 @app.get("/reset")
 async def reset_screen(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
-    turtleworld.reset()
+    reset_status = turtleworld.reset()
+    return reset_status
