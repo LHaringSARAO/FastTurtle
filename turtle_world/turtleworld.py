@@ -18,7 +18,8 @@ class TurtleWorld():
 
     def reset(self):
         """Should reset canvas and get rid of all turtles"""
-        self.screen.resetscreen()
+        # self.screen.resetscreen()
+        # NOTE the resetscreen does remove settings made, but doesnt remove the turtles
         return {"message": "screen and turtles reset"}
 
 
@@ -44,8 +45,19 @@ class TurtleWorld():
         return
     
 
-    def _create_world_racing(self):
+    def _create_world_racing(self, track_width=100, track_height=400):
         """Creates a world """
+        line_draw_turt = turtle.Turtle()
+        line_draw_turt.setheading(0)
+        line_draw_turt.forward(track_width)
+        line_draw_turt.setheading(90)
+        line_draw_turt.forward(track_height)
+        line_draw_turt.setheading(180)
+        line_draw_turt.forward(track_width)
+        line_draw_turt.setheading(180)
+        line_draw_turt.forward(track_height)
+
+
         num_turtles = 5
         turtle.colormode(255)
 
@@ -68,7 +80,8 @@ class TurtleWorld():
         data = {}
         winner = False
         counter = 0
-        distance_finishline = 1000
+        distance_finishline = 300
+        # TODO add a way in this animation to let all the turtles move at the same time
         while not winner:
             if counter > 500:
                 break
