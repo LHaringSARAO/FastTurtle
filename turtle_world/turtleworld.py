@@ -12,7 +12,6 @@ class TurtleWorld():
         self.screen = turtle.Screen()
         self.turtle_list = []
 
-        self.screen.bgcolor(144)
         self.screen.bgcolor((144, 236, 144))
         self.screen.title("Turtle World")
         self.screen.screensize(2000,1500)
