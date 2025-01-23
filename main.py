@@ -36,7 +36,7 @@ def read_root():
 #     turtleworld.move_turtles()
 
 
-@app.get("/create_turtle_race_world")
+@app.get("/prepare_race")
 async def create_turtle_race(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
     turtleworld._create_world_racing()
     return
