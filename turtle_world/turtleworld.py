@@ -12,7 +12,8 @@ class TurtleWorld():
         self.screen = turtle.Screen()
         self.turtle_list = []
 
-        self.screen.bgcolor("green")
+        self.screen.bgcolor(144)
+        self.screen.bgcolor((144, 236, 144))
         self.screen.title("Turtle World")
         self.screen.screensize(2000,1500)
 
@@ -52,9 +53,9 @@ class TurtleWorld():
         line_draw_turt.forward(track_width)
         line_draw_turt.setheading(90)
         line_draw_turt.forward(track_height)
-        line_draw_turt.setheading(180)
+        line_draw_turt.setheading(270)
         line_draw_turt.forward(track_width)
-        line_draw_turt.setheading(180)
+        line_draw_turt.setheading(360)
         line_draw_turt.forward(track_height)
 
 
