@@ -168,6 +168,7 @@ class TurtleWorld():
                     racer.pendown()
                     winner_y_cor = racer.ycor()
                     winner_x_cor = racer.xcor()
+                    racer.pensize(3)
                     racer.goto(self.X_START, winner_y_cor)
                     racer.goto(winner_x_cor, winner_y_cor)
             if len(winners) >= 1:
