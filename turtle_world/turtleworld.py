@@ -107,7 +107,7 @@ class TurtleWorld():
     def make_turtle_race2(self, num_racers=3):
         HEIGHT = 1000
         X_START = -900
-        X_FINISHLINE = 500
+        X_FINISHLINE = 900
         self.X_FINISHLINE = X_FINISHLINE
 
         POS_BOTTOM_LEFT = (-925, -525)
@@ -130,7 +130,7 @@ class TurtleWorld():
         pos_turtle.pendown()
         pos_turtle.goto(X_FINISHLINE, -900)
         pos_turtle.penup()
-        pos_turtle.isvisible(False)
+        pos_turtle.hideturtle()
 
 
         colors = ['red', 'green', 'blue', 'orange', 'yellow', 'black', 'purlpe', 'pink', 'brown', 'cyan']
