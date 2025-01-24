@@ -128,11 +128,16 @@ class TurtleWorld():
         colors = ['red', 'green', 'blue', 'orange', 'yellow', 'black', 'purlpe', 'pink', 'brown', 'cyan']
         spacing = HEIGHT/(len(colors)+1)
         i = 0
-        for color in colors:
+        for num_racer in range(0, num_racers):
             i += 1
             new_turtle = turtle.Turtle()
             new_turtle.penup()
             new_turtle.goto(-925, -500+i*spacing)
+            try:
+                t_color = colors[num_racer]
+            except:
+                t_color = 'black'
+            new_turtle.color(t_color)
 
 
 
