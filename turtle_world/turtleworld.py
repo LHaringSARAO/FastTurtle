@@ -103,4 +103,15 @@ class TurtleWorld():
         return data
 
 
-        
+
+    def make_turtle_race2(self):
+        pos_turtle = turtle.Turtle()
+        pos_turtle.color((255, 0, 0))
+        pos_turtle.goto(200, 0)
+
+
+        x_turtle = turtle.Turtle()
+        x_turtle.color((0, 255, 0))
+        x_turtle.goto(0, 10)
+
+        return None
