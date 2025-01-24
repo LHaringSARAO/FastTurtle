@@ -107,11 +107,20 @@ class TurtleWorld():
     def make_turtle_race2(self):
         pos_turtle = turtle.Turtle()
         pos_turtle.color((255, 0, 0))
-        pos_turtle.goto(0, 200)
+        pos_turtle.goto(0, 400)
 
 
         x_turtle = turtle.Turtle()
         x_turtle.color((0, 0, 255))
-        x_turtle.goto(-200, 0)
+        x_turtle.goto(-400, 0)
+
+        rt = turtle.Turtle()
+        rt.color((255, 0, 255))
+        rt.goto(400, 400)
+
+
+        rb = turtle.Turtle()
+        rb.color((0, 255, 255))
+        rb.goto(-400, -400)
 
         return None
