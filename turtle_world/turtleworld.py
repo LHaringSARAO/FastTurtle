@@ -104,7 +104,7 @@ class TurtleWorld():
 
 
 
-    def make_turtle_race2(self, num_racers=3):
+    def make_turtle_race2(self, num_racers=10):
         HEIGHT = 1000
         X_START = -900
         X_FINISHLINE = 900
@@ -116,6 +116,7 @@ class TurtleWorld():
         POS_BOTTOM_RIGHT = (925, -525)
 
         pos_turtle = turtle.Turtle()
+        pos_turtle.pensize(5)
         pos_turtle.color('black')
         pos_turtle.penup()
         pos_turtle.goto(POS_BOTTOM_LEFT)
@@ -128,6 +129,7 @@ class TurtleWorld():
         pos_turtle.penup()
         pos_turtle.goto(X_FINISHLINE, 900)
         pos_turtle.pendown()
+        pos_turtle.pensize(5)
         pos_turtle.goto(X_FINISHLINE, -900)
         pos_turtle.penup()
         pos_turtle.hideturtle()
@@ -139,6 +141,7 @@ class TurtleWorld():
         for num_racer in range(0, num_racers):
             i += 1
             new_turtle = turtle.Turtle()
+            new_turtle.shape('turtle')
             new_turtle.penup()
             new_turtle.goto(-925, -500+i*spacing)
             try:
