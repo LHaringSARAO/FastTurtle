@@ -171,6 +171,7 @@ class TurtleWorld():
                     racer.pensize(3)
                     racer.goto(self.X_START, winner_y_cor)
                     racer.goto(winner_x_cor, winner_y_cor)
+                    break
             if len(winners) >= 1:
                 race_in_progress = False
                 # do a victory lap
