@@ -104,10 +104,11 @@ class TurtleWorld():
 
 
 
-    def make_turtle_race2(self, num_racers=2):
+    def make_turtle_race2(self, num_racers=3):
         HEIGHT = 1000
         X_START = -900
-        X_FINISHLINE = 900
+        X_FINISHLINE = 500
+        self.X_FINISHLINE = X_FINISHLINE
 
         POS_BOTTOM_LEFT = (-925, -525)
         POS_TOP_LEFT = (-925, 525)
@@ -124,6 +125,13 @@ class TurtleWorld():
         pos_turtle.goto(POS_BOTTOM_RIGHT)
         pos_turtle.goto(POS_BOTTOM_LEFT)
 
+        pos_turtle.penup()
+        pos_turtle.goto(X_FINISHLINE, 900)
+        pos_turtle.pendown()
+        pos_turtle.goto(X_FINISHLINE, -900)
+        pos_turtle.penup()
+        pos_turtle.isvisible(False)
+
 
         colors = ['red', 'green', 'blue', 'orange', 'yellow', 'black', 'purlpe', 'pink', 'brown', 'cyan']
         spacing = HEIGHT/(len(colors)+1)
@@ -138,8 +146,24 @@ class TurtleWorld():
             except:
                 t_color = 'black'
             new_turtle.color(t_color)
-
-
-
+            self.turtle_list.append(new_turtle)
 
         return None
+    
+
+
+    def race_turtles2(self):
+        """Move turtles forward by distance, repeat until one crossed the finifh line"""
+        winners = []
+        race_in_progress = True
+        while race_in_progress:
+            for racer in self.turtle_list:
+                racer.forward(randint(1, 50))
+            for racer in self.turtle_list:
+                if racer.xcor() > self.X_FINISHLINE:
+                    winners.append(racer.color())
+            if len(winners) >= 1:
+                race_in_progress = False
+
+        return winners
+
