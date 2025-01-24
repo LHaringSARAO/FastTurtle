@@ -107,6 +107,7 @@ class TurtleWorld():
     def make_turtle_race2(self, num_racers=10):
         HEIGHT = 1000
         X_START = -900
+        self.X_START = X_START
         X_FINISHLINE = 900
         self.X_FINISHLINE = X_FINISHLINE
 
@@ -162,13 +163,12 @@ class TurtleWorld():
         while race_in_progress:
             for racer in self.turtle_list:
                 racer.forward(randint(1, 50))
-            for racer in self.turtle_list:
                 if racer.xcor() > self.X_FINISHLINE:
                     winners.append(racer.color())
                     racer.pendown()
                     winner_y_cor = racer.ycor()
                     winner_x_cor = racer.xcor()
-                    racer.goto(0, winner_y_cor)
+                    racer.goto(self.X_START, winner_y_cor)
                     racer.goto(winner_x_cor, winner_y_cor)
             if len(winners) >= 1:
                 race_in_progress = False
