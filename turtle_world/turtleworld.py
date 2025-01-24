@@ -108,22 +108,20 @@ class TurtleWorld():
         X_START = -900
         X_FINISHLINE = 900
 
+        POS_BOTTOM_LEFT = (-925, -525)
+        POS_TOP_LEFT = (-925, 525)
+        POS_TOP_RIGHT = (925, 525)
+        POS_BOTTOM_RIGHT = (925, -525)
+
         pos_turtle = turtle.Turtle()
         pos_turtle.color((255, 0, 0))
-        pos_turtle.goto(0, 500)
+        pos_turtle.penup()
+        pos_turtle.goto(POS_BOTTOM_LEFT)
+        pos_turtle.pendown()
+        pos_turtle.goto(POS_TOP_LEFT)
+        pos_turtle.goto(POS_TOP_RIGHT)
+        pos_turtle.goto(POS_BOTTOM_RIGHT)
 
 
-        x_turtle = turtle.Turtle()
-        x_turtle.color((0, 0, 255))
-        x_turtle.goto(-925, 0)
-
-        rt = turtle.Turtle()
-        rt.color((255, 0, 255))
-        rt.goto(900, 600)
-
-
-        rb = turtle.Turtle()
-        rb.color((0, 255, 255))
-        rb.goto(-800, -800)
 
         return None
