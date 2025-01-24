@@ -56,5 +56,5 @@ async def reset_screen(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWor
 
 @app.get("/create_race2")
 async def create_race2(turtleworld: Annotated[TurtleWorld, Depends(get_TurtleWorld)]):
-    reset_status = turtleworld.reset()
-    return reset_status
+    race_setup_status = turtleworld.make_turtle_race2()
+    return race_setup_status
