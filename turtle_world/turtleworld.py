@@ -135,7 +135,7 @@ class TurtleWorld():
         pos_turtle.hideturtle()
 
 
-        colors = ['red', 'green', 'blue', 'orange', 'yellow', 'black', 'purlpe', 'pink', 'brown', 'cyan']
+        colors = ['red', 'green', 'blue', 'orange', 'yellow', 'black', 'purple', 'pink', 'brown', 'cyan']
         spacing = HEIGHT/(len(colors)+1)
         i = 0
         for num_racer in range(0, num_racers):
@@ -165,8 +165,16 @@ class TurtleWorld():
             for racer in self.turtle_list:
                 if racer.xcor() > self.X_FINISHLINE:
                     winners.append(racer.color())
+                    racer.pendown()
+                    winner_y_cor = racer.ycor()
+                    winner_x_cor = racer.xcor()
+                    racer.goto(0, winner_y_cor)
+                    racer.goto(winner_x_cor, winner_y_cor)
             if len(winners) >= 1:
                 race_in_progress = False
+                # do a victory lap
+
+
 
         return winners
 
